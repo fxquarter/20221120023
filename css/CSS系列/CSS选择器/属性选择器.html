@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .demo a{
+            float: left;
+            display: block;
+            height: 50px;
+            width:50px;
+            border-radius: 10px;
+            text-align: center;
+            color: aliceblue;
+            text-decoration: none;
+            margin-right: 5px;
+            background-color: blue;
+        }
+        /* id=first的元素 */
+        a[id=first]{
+            background-color: blueviolet;
+        }
+        /* class中有links的元素 */
+        a[class*="links"]{
+            background-color: yellow;
+        }
+        /* 选中href中以http开头的元素 */
+        a[href^=http]{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p class="demo">
+        <a href="http://www.baidu.com" class="links item first" id="first">1</a>
+        <a href="" class="links item first" target="_blank" title="test">2</a>
+        <a></a>
+        <a></a>
+        <a></a>
+    </p>
+</body>
+</html>

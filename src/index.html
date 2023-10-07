@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>饿了么</title>
+</head>
+<body>
+    <div class="main">
+        <div class="search-bar-top" id="map-container">
+            <div id="map"></div>
+            <img class="icon icon-location" src="/elm/location.svg" alt="">
+            <span class="place">云南大学呈贡校区</span>
+            <button id="locate-button">
+                <img class="icon icon-arrow_down" src="/elm/arrow-down.svg" alt="">
+            </button>
+            
+        </div>
+        <div class="search-bar-button">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索饿了么商家、商品名称">
+                <button class="search-button">搜索</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="quick-nav">
+                <div class="row">
+                    <a href="#">
+                        <img src="/elm/dcfl01.png" alt="">
+                        <div>美食</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl02.png" alt="">
+                        <div>早餐</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl03.png" alt="">
+                        <div>跑腿代购</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl04.png" alt="">
+                        <div>汉堡披萨</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl05.png" alt="">
+                        <div>甜品饮品</div>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <img src="/elm/dcfl06.png" alt="">
+                        <div>速食简餐</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl07.png" alt="">
+                        <div>地方小吃</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl08.png" alt="">
+                        <div>米粉面馆</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl09.png" alt="">
+                        <div>包子粥铺</div>
+                    </a>
+                    <a href="#">
+                        <img src="/elm/dcfl10.png" alt="">
+                        <div>炸鸡炸串</div>
+                    </a>
+                </div>
+            </div>
+            <div class="banner-first">
+                <div class="left">
+                    <div class="title">品质套餐</div>
+                    <div class="desc">搭配齐全吃的好</div>
+                    <a href="#">
+                        <div class="btn-buy">立即购买 ></div>
+                    </a>
+                </div>
+                <img class="right" src="/elm/banner.png" class="right" />
+            </div>
+             <div class="banner-scroll">
+              <img src="/elm/banner_!.jpg" alt="">
+             </div>
+        </div>
+         <div class="shops">
+            <div class="title-bar">
+                <span>商家推荐</span>
+            </div>
+            <div class="fliter-bar">
+                <div class="item">
+                    <span>综合排序</span>
+                    <a href="#">
+                        <img class="icon icon-arrow_down" src="/elm/arrow-down copy.svg" alt="">
+                    </a>
+                </div>
+                <div class="item">距离最近</div>
+                <div class="item">品质联盟</div>
+                <div class="item">
+                    <a href="#">
+                        <span>筛选</span>
+                    </a>
+                </div>
+            </div>
+            <div class="shop-list-container">
+                <div class="result">
+                    <div class="title">没有结果</div>
+                    <div class="desc">登录后查看更多结果</div>
+                    <a href="#">
+                        <div class="btn-login">登录</div>
+                    </a>
+                    
+                </div>
+            </div>
+         </div>
+        <div class="footer h-16 bg-white fixed bottom-0 left-0 right-0 border-solid border border-[#e5e7eb] shadow-">
+            <ul class="tab-menu ">
+                <li class="active">
+                    <a class="home" href="#">
+                        <div class="tab" onclick="changeTab(0)">
+                            <i class="icon icon-home"></i>
+                            <div class="tab-content">首页</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <div class="tab" onclick="changeTab(1)">
+                            <i class="icon icon-found tab"></i>
+                            <div class="tab-content">发现</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <div class="tab" onclick="changeTab(2)">
+                            <i class="icon icon-order tab"></i>
+                            <div class="tab-content">订单</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <div class="tab" onclick="changeTab(2)">
+                            <i class="icon icon-mine tab"></i>
+                            <div class="tab-content">我的</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="map.js"></script>
+</body>
+</html>

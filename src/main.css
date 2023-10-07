@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@layer components{
+/* 底部导航栏 */
+body{
+    @apply m-0
+  }
+  .footer .tab-menu{
+    @apply m-0 p-0 list-none flex justify-around
+  }
+  .footer .tab-menu li{
+    @apply  flex-1
+  }
+  .footer .tab-menu li a{
+    @apply  text-center block py-2.5 px-0 text-[#cdcdcd] text-sm
+  }
+  .footer .tab-menu li a .icon{
+    @apply w-6 h-6 block my-0 mx-auto  bg-contain
+  }
+  .footer .tab-menu li.active a:hover{
+    @apply text-[#1296db]
+  }
+   /* 主要模块 */
+    /* 顶部＋搜索栏 */
+    .search-bar-top{
+        @apply  h-14 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center
+        py-0 px-5
+      }
+      .search-bar-top .icon-location{
+        @apply w-6 h-7 align-middle
+      }
+      .search-bar-top .place{
+        @apply text-2xl font-bold text-white align-middle mx-2 my-0
+      }
+      .search-bar-top .icon-arrow_down{
+        @apply w-4 h-3 align-middle
+      }
+      .search-bar-button{
+          @apply  flex justify-center items-center h-14 bg-gradient-to-r from-sky-500 to-indigo-500
+      }
+      .search-bar-button .search-container{
+        @apply  flex items-center bg-white rounded-3xl px-4 py-1 
+      }
+      .search-bar-button .search-container input[type="text"]{
+        @apply border-none outline-none w-72 text-base p-2
+      }
+      .search-bar-button .search-container .search-button{
+        @apply bg-[#007bff] border-none rounded-3xl text-white text-base py-2 px-5 cursor-pointer
+      }
+      /* 餐品分类 */
+      .quick-nav{
+        @apply pb-8
+      }
+      .quick-nav .row{
+        @apply flex justify-around py-1 px-0
+      }
+      .quick-nav a{
+        @apply block text-center 
+      }
+      .quick-nav a img{
+        @apply h-14 w-14 no-underline text-[#666] text-base
+      }
+      /* 广告 */
+      .container{
+        @apply py-0 px-3
+      }
+      .banner-first{
+        @apply  h-32 mb-1 box-border bg-gradient-to-r from-gray-50 to-gray-100 py-3 px-4
+      }
+      .banner-first .left{
+        @apply float-left 
+      }
+      .banner-first .left .title{
+        @apply font-bold text-2xl
+      }
+      .banner-first .left .desc{
+        @apply text-xl text-[#777] my-1 mx-0
+      }
+      .banner-first .left .btn-buy{
+        @apply text-base font-bold text-[#af8260]
+      }
+      .banner-first .right{
+        @apply float-right 
+      }
+      .banner-first .right{
+        @apply w-44 h-28
+      }
+      .banner-scroll{
+        @apply h-28 flex justify-center items-center pb-4
+      }
+      .banner-scroll img{
+        @apply h-full w-full
+      }
+      /* 推荐栏 */
+      .shops{
+        @apply  h-screen
+      }
+      .title-bar{
+        @apply my-2 mx-2 h-10 leading-10 text-center text-lg
+      }
+      .title-bar::before{
+        @apply inline-block w-6 h-0.5 bg-black content-[""] align-middle mr-3
+      }
+      .title-bar::after{
+        @apply inline-block w-6 h-0.5 bg-black content-[""] align-middle ml-3
+      }
+      .fliter-bar{
+        @apply h-12 flex items-center py-0 px-4 pb-0 mb-2
+      }
+      .fliter-bar .item{
+        @apply h-12 grow text-[#666]
+      }
+      .fliter-bar .item .icon.icon-arrow_down{
+        @apply w-4 h-3 align-bottom
+      }
+      .fliter-bar .item .icon.icon-fliter{
+        @apply w-4 h-3 align-middle
+      }
+      .fliter-bar .item:last-child{
+        @apply text-right
+      }
+      .fliter-bar .item:first-child{
+        @apply text-left
+      }
+      .fliter-bar .item:not(:first-child):not(:last-child){
+        @apply text-center
+      }
+      /* 无搜索结果 */
+      
+}
+@tailwind utilities;
+@layer utilities{
+    .main{
+      margin-bottom: 64px;
+    }
+    .banner-scroll ul.slides{
+       background-color: #eee;
+    }
+    .shop-list-container .result{
+            text-align: center;
+            padding-top: 200px;
+    }
+    .shop-list-container .result .img-not-found{
+       width: 246px;
+       height: 246px;
+       background-size: contain;
+    }
+    .shop-list-container .result .title{
+       color: #6a6a6a;
+       font-weight: 400;
+       font-size: 20px;
+        line-height: 24px;
+    }
+    .shop-list-container .result .desc{
+        color: #999;
+        font-weight: 400;
+        font-size: 12px;
+         line-height: 30px;
+    }
+    .shop-list-container .result .btn-login{
+       width: 147px;
+       height: 43px;
+       color: white;
+       background-color: #56d176;
+       border-radius:3px;
+       line-height: 43px;
+       font-size: 12px;
+       display: inline-block;
+    }
+    .footer .tab-menu li a .icon.icon-home{
+        background-image: url("/elm/elem-home-normal.svg");
+    } 
+    .footer .tab-menu li.active a .icon.icon-home:hover{
+        background-image: url("/elm/elem-home-active.svg");
+    }
+    .footer .tab-menu li a .icon.icon-found{
+        background-image: url("/elm/elem-found-normal.svg");
+    }
+    .footer .tab-menu li.active a .icon.icon-found:hover{
+        background-image: url("/elm/elem-found-active.svg");
+    }
+    .footer .tab-menu li a .icon.icon-order{
+        background-image: url("/elm/elem-order-normal.svg");
+    }
+    .footer .tab-menu li.active a .icon.icon-order:hover{
+        background-image: url("/elm/elem-order-active.svg");
+    }
+    .footer .tab-menu li a .icon.icon-mine{
+        background-image: url("/elm/elem-mine-normal.svg");
+    }
+  .footer .tab-menu li.active a .icon.icon-mine:hover{
+        background-image: url("/elm/elem-mine-active.svg");
+    }
+}

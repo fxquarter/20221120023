@@ -1,0 +1,608 @@
+@tailwind base;
+@tailwind components;
+@layer components{
+    /* 标签统一样式 */
+    body,
+    h6,
+    p,
+    dl,
+    dt,
+    ul,
+    li,
+    input
+    {
+        @apply m-0 p-0
+    }
+    body,
+    input
+    {
+        @apply font-['微软雅黑']
+    }
+    em,
+    i{
+        @apply font-normal not-italic
+    }
+    ul{
+        @apply list-none
+    }
+    a{
+        @apply text-stone-950 no-underline
+    }
+    a:hover{
+        @apply text-blue-800
+    }
+    input:placeholder-shown{
+        @apply text-sm text-white
+    } 
+    img{
+        @apply border-0 align-middle
+    }
+    /* 类单独处理样式 */
+    .clearfix:after{
+        @apply block h-0 clear-both
+    }
+    .main-tit{
+        @apply leading-8 mb-6 border-b-4 border-b-gray-300 
+    }
+    .main-tit h6{
+        @apply text-base font-bold relative py-2 px-0 float-left
+    }
+    .main-tit .more{
+        @apply float-right text-stone-950 leading-5 mt-4 text-xs
+    }
+    .main-list li{
+        @apply leading-10 whitespace-nowrap overflow-hidden text-ellipsis h-9 leading-9
+    }
+    .main-list li span{
+        @apply float-right
+    }
+    .topbar {
+        @apply text-white py-3 px-0 bg-blue-800 leading-9 text-base h-16
+    }
+    .topbar a{
+        @apply text-white
+    }
+    .topbar .c1{
+        @apply float-left justify-around flex w-60
+    }
+    .topbar .c2{
+        @apply float-right
+    }
+    .topbar .c3{
+        @apply float-right mr-12 
+    }
+    .topbar .c3 a{
+        @apply my-0 mx-2 align-middle
+    }
+    .header{
+        @apply py-11 px-0
+    }
+    .header .logo{
+        @apply float-left
+    }
+    .header .main-nav{
+        @apply float-left mt-2 ml-5 
+    }
+
+    .header .ad {
+        @apply block float-right mt-3 w-72 relative 
+    }
+    .header .ad a{ 
+        @apply inline-block w-16 h-5
+    }
+    .search-box{
+        @apply inline-block text-left relative align-middle leading-none h-9
+    }
+    .search-box .text{
+        @apply border-none h-6 leading-6 align-middle text-xs w-44 pt-2 pr-12 pb-2 pl-2 h-9
+    }
+    .search-box .btn{
+        @apply absolute right-0 top-0 h-9 align-middle
+    }
+    .main-nav{
+        @apply relative z-20 leading-10 
+    }
+    .main-nav>ul>li{
+        @apply relative float-left w-1/5 text-center my-2 mx-0 z-40 w-28 h-11
+    }
+    .main-nav>ul>li a {
+        @apply block text-center 
+    }
+    .main-nav>ul>li.on:after{
+        @apply absolute top-full  bg-blue-600
+    }
+    .main-nav>ul>li:hover {
+        @apply z-50
+    }
+    .main-nav>ul>li:hover:after{
+        @apply  absolute top-full  bg-blue-600
+    }
+    .index-row1 .c1{
+        @apply float-left relative h-[470px]
+    }
+    .index-row1 .c1 .hd{
+        @apply absolute w-full text-right top-96 z-30
+    }
+    .index-row1 .c1 .hd li{
+        @apply inline-block w-2 h-2 my-0 mx-1 cursor-pointer
+    }
+    .index-row1 .c1 .bd li .pic img{
+        @apply h-full w-full
+    }
+    .index-row1 .c1 .slide{
+        @apply overflow-hidden relative h-[470px]
+    }
+    .index-row1 .c1 .slide .hd{
+        @apply text-right right-2 h-6
+    }
+    .index-row1 .c1 .slide .hd .min{
+        @apply flex justify-evenly absolute z-50 w-[200px]
+    }
+    .index-row1 .c1 .slide .hd .min .m{
+        @apply w-5 h-5 cursor-pointer rounded-[50%] bg-white border-solid border-[rgba(255,255,255,0.5)] border-2
+    }
+    .index-row1 .c1 .slide .bd{
+        @apply h-[470px]
+    }
+    .index-row1 .c1 .slide .bd li{
+        @apply relative
+    }
+    .index-row1 .c1 .slide .bd .images{
+        @apply flex absolute transition-[.2s] h-[470px]
+    }
+    .index-row1 .c1 .slide .bd .images .img{
+        @apply w-[680px] h-[470px]
+    }
+    .index-row1 .c2{
+        @apply float-right
+    }
+    .index-row1 .c2 .r1{
+        @apply block h-20 
+    }
+    .index-row1 .c2 .r1 a {
+        @apply inline-block float-right w-36 mr-0 h-20
+    }
+    .index-row1 .c2 .r1 .a1{
+        @apply block float-left mt-2 mr-2
+    }
+    .index-row1 .c2 .main-list{
+        @apply mt-2 pl-12
+    }
+    .index-row1 .c2 .main-list li{
+        @apply pl-0 
+    }
+    .index-row1 .c2 .more{
+        @apply flex justify-center items-center
+    }
+    .index-row2{
+        @apply my-7 mx-0
+    }
+    .index-row2 .c1{
+        @apply float-left
+    }
+    .index-row2 .c1 .main-list{
+        @apply -mt-3 
+    }
+    .index-row2 .c2{
+        @apply float-right
+    }
+    .index-row2 .c2 .list{
+        @apply my-0 -mx-1
+    }
+    .index-row2 .c2 .list li{
+        @apply float-left w-1/2
+    }
+    .index-row2 .c2 .list li a{
+        @apply block my-0 mx-1
+    }
+    .index-row2 .c2 .list li .pic img{
+        @apply w-full h-32
+    }
+    .index-row2 .c2 .list li .text{
+        @apply leading-5 py-2 px-2 h-10 overflow-hidden bg-slate-400
+    }
+    .index-row3 .c1{
+        @apply float-left
+    }
+    .index-row3 .c1 .main-list li i{
+        @apply my-0 mx-2
+    }
+    .index-row3 .c2{
+        @apply float-right relative h-[324px]
+    }
+    .index-row3 .c2 .hd{
+        @apply leading-7 mb-6
+    }
+    .index-row3 .c2 .hd .clearfix{
+        @apply h-[245px]
+    }
+    .index-row3 .c2 .hd li.on::after{
+        @apply absolute left-0 -bottom-1 w-full h-2 -mb-[14px]
+    }
+    .index-row3 .c2 .hd li{
+        @apply text-base font-bold relative py-2 px-0 float-left mr-10 cursor-pointer
+    }
+    .index-row3 .c2 .bd{
+        @apply h-[245px]
+    }
+    .index-row3 .c2 .bd .pages{
+        @apply hidden
+    }
+    .index-row3 .c2 .bd .active{
+        @apply block
+    }
+    .index-row3 .c2 .bd li .pic{
+        @apply h-28
+    }
+    .index-row3 .c2 .bd li .pic img {
+        @apply w-full h-full
+    }
+    .index-row3 .c2 .slide .hd {
+        @apply text-center static mt-2
+    }
+    .index-row3 .c2 .slide .bd li a{
+        @apply float-left w-56 my-0 mx-1
+    }
+    .index-row3 .c2 .slide .bd li .text{
+        @apply mt-2 text-center whitespace-nowrap overflow-hidden text-ellipsis bg-black text-white py-2 px-0 opacity-60 -mt-8
+    }
+    .index-row2 .c1 .main-tit{
+        @apply h-14
+    }
+    .index-row2 .c2 .main-tit{
+        @apply h-14
+    }
+    .index-row3 .c1 .main-tit{
+        @apply h-14
+    }
+    .index-row3 .c2 .hd{
+        @apply h-14
+    }
+    .index-row2 .c2 .list{
+        @apply h-48
+    }
+    .index-row2 .c2 .list .clearfix{
+        @apply h-48
+    }
+    .index-row2 .c2 .list .clearfix li{
+        @apply h-48
+    }
+    .index-row2 .c2 .list .clearfix li a{
+        @apply h-48
+    }
+    .index-row2 .c2 .list .clearfix li a .text{
+        @apply h-12
+    }
+    .index-row4 {
+        @apply bg-white border border-solid border-[#efefef] pt-5 pb-1 px-5 rounded-lg mt-7 h-[400px] 
+    }
+    .index-row4 .inner{
+        @apply h-[352px]
+    }
+    .index-row4 .inner .slide{
+        @apply h-[352px]
+    }
+    .index-row4 .slide .hd{
+        @apply border-b-4 border-solid border-[#f6f6f6] h-11
+    }
+    .index-row4 .slide .hd .clearfix{
+        @apply h-10
+    }
+    .index-row4 .slide .hd li {
+        @apply float-left text-lg my-0 mx-3 font-bold leading-10 relative cursor-pointer
+    }
+    .index-row4 .slide .hd li.on::after{
+        @apply content-none absolute -bottom-1 left-0 w-full h-2
+    }
+    .index-row4 .slide .bd{
+        @apply h-72
+    }
+    .index-row4 .slide .bd .item{
+        @apply h-72
+    }
+    .index-row4 .slide .bd .item .main-list{
+        @apply h-[140px]
+    }
+    .index-row4 .slide .bd .item .pic-list{
+        @apply h-[128px]
+    }
+    .index-row4 .slide .bd .item .main-list ul{
+        @apply my-0 -mx-[2%]
+    }
+    .index-row4 .slide .bd .item .main-list li{
+        @apply float-left w-1/2 pl-0 bg-no-repeat
+    }
+    .index-row4 .slide .bd .item .pic-list{
+        @apply  border border-solid border-[#efefef] shadow-xl
+    }
+    .index-row4 .slide .bd .item .main-list li a{
+        @apply h-7 leading-7 block my-0 mx-[5%]
+    }
+    .index-row4 .slide .bd .item .pic-list{
+        @apply my-7 -mx-2 
+    }
+    .index-row4 .slide .bd .item .pic-list .clearfix{
+        @apply w-[1200px] h-32 flex justify-center
+    }
+    .index-row4 .slide .bd .item .pic-list .clearfix li{
+        @apply w-[136px] h-[126px]
+    }
+    .index-row4 .slide .bd .item .pic-list li{
+        @apply float-left w-1/6
+    }
+    .index-row4 .slide .bd .item .pic-list li a {
+        @apply pt-1 pb-0 px-1 block my-0 mx-2 text-center w-[116px] h-[126px]  }
+    .index-row4 .slide .bd .item .pic-list li a  .text{
+        @apply text-xs
+    }
+    .index-row4 .slide .bd .item .pic-list li a .pic{
+        @apply inline-block w-16 h-16
+    }
+    .index-row4 .slide .bd .item .pic-list li:hover a{
+        @apply border-[#3399cc] bg-[#3399cc]
+    }
+    .index-row4 .slide .bd .item .pic-list li:hover a .text{
+        @apply text-white
+    }
+    .footer{
+        @apply relative pt-5 pb-0 px-1 min-w-[1200px] opacity-80 h-60
+    }
+    .footer .wrap{
+        @apply w-[1200px] h-56
+    }
+    .footer .c1{
+        @apply float-left
+    }
+    .footer .c1 .clearfix{
+        @apply h-32
+    }
+    .footer .c1 .clearfix .icons{
+        @apply w-64 h-28
+    }
+    .footer .c1 .clearfix .icons a{
+        @apply block h-12
+    }
+    .footer .c1 .clearfix .icons a .pic{
+        @apply w-64 h-12
+    }
+    .footer .c1 .clearfix .icons a .pic img{
+        @apply w-64 h-12
+    }
+    .footer .c1 .pic img{
+        @apply w-24
+    }
+    .footer .c1 li{
+        @apply float-left mr-12 text-center
+    }
+    .footer .c1 li p{
+        @apply mt-2
+    }
+    .footer .c2{
+        @apply float-right w-[500px] text-xs
+    }
+    .footer .c2 .r1 dl{
+        @apply float-left leading-7 w-[45%] text-xs ml-[5%]
+    }
+    .footer .c2 .r1 dl dt{
+        @apply font-bold
+    }
+    .footer .c2 .r2{
+        @apply mt-2 text-center leading-7
+    }
+    .sidebar-nav{
+        @apply fixed right-5 top-[20%] text-center z-[45]
+    }
+    .sidebar-nav .close{
+        @apply absolute right-0 top-0 w-5 h-5 z-[2] cursor-pointer
+    }
+    .mores{
+        @apply absolute top-2 right-0
+    }
+    .bgfw{
+        @apply overflow-hidden flex
+    }
+    
+    #slide3{
+        @apply relative
+    }
+
+    .date{
+        @apply text-white text-base font-sans leading-9
+    }
+    .page{
+        @apply inset-y-2/4 inset-x-5 
+    }
+
+    .page .ad .imgs{
+        @apply border-0
+    }
+    .index-row3 .c2 .bd .pages{
+        @apply opacity-0 absolute transition-opacity duration-[0.3s]
+    }
+    .index-row3 .c2 .bd .active{
+        @apply block
+    }
+}
+@tailwind utilities;
+@layer utilities{
+    /* 主要进行一些宽和高的规定和背景图片的设置 */
+    body{
+        min-width: 1360px;
+        font-size: 16px;
+    }
+    h6{
+        font-size: 100%;
+    }
+    input{
+        font-size: 100%;
+        outline: 0;
+    }
+    .header{
+        height: 487px;
+    }
+    .index-row1 .c1{
+        width: 470px;
+    }
+    .index-row1 .c2{
+        width: 470px;
+        height: 443px;
+    }
+    .main-tit h6::after{
+        content: '';
+        position: absolute;
+        margin-bottom:-14px ; 
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 10px;
+        background: url(/images/line.png) bottom center no-repeat;
+    }
+    .wrap{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .header .main-nav{
+        width: 570px;
+    }
+    .search-box .text{
+        background: url(/images/search-bg.png);
+    }
+    .main-nav>ul>li a{
+        font-size:22px;
+    }
+    .main-nav>ul>li.on:after{
+        content: '';
+        width: 60%;
+        height: 2px;
+        left: 20%;
+    }
+    .main-nav>ul>li:hover:after{
+        content: '';
+        width: 60%;
+        height: 2px;
+        left: 20%;
+    }
+    .index-row1{
+        height: 500px;
+    }
+    .index-row2{
+        height: 522px;
+        margin: 30px 0;
+    }
+    .index-row3{
+        height: 324px;
+    }
+    .index-row1 .c2 .main-list{
+        background: url(/images/yd.png)left center no-repeat;
+        background-size: 6%;;
+    }
+    .index-row2 .c2{
+        width: 470px;
+    }
+    .index-row3 .c1{
+        width: 680px;
+    }
+    .index-row3 .c2{
+        width: 470px;
+    }
+    .index-row3 .c2 .hd{
+        border-bottom: 4px solid #ccc;
+    }
+    .index-row3 .c2 .hd li.on::after{
+        content: '';
+        background: url(/images/line.png) bottom center no-repeat;
+    }
+    
+    .index-row4 .slide .hd li.on::after{
+        background: url(/images/line.png) bottom center no-repeat;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li1 .pic{
+        background: url(/images/r4-icon1.png)center center no-repeat;
+        background-size: 74%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li2 .pic{
+        background: url(/images/r4-icon2.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li3 .pic{
+        background: url(/images/r4-icon3.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li4 .pic{
+        background: url(/images/r4-icon4.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li5 .pic{
+        background: url(/images/r4-icon5.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li6 .pic{
+        background: url(/images/r4-icon6.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li7 .pic{
+        background: url(/images/r4-icon7.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li.li8 .pic{
+        background: url(/images/r4-icon8.png)center center no-repeat;
+        background-size: 70%!important;
+    }
+    .index-row4 .slide .bd .item .pic-list li:hover.li1 .pic {
+        background: url(/images/r4-icon1-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li2 .pic {
+        background: url(/images/r4-icon2-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li3 .pic {
+        background: url(/images/r4-icon3-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li4 .pic {
+        background: url(/images/r4-icon4-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li5 .pic {
+        background: url(/images/r4-icon5-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li6 .pic {
+        background: url(/images/r4-icon6-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li7 .pic {
+        background: url(/images/r4-icon7-on.png) center center no-repeat;
+      }
+      
+      .index-row4 .slide .bd .item .pic-list li:hover.li8 .pic {
+        background: url(/images/r4-icon8-on.png) center center no-repeat;
+      }
+      
+    .index-row1 .c1{
+       width: 680px;
+    }
+    .index-row1 .c1 .hd li{
+        background: url(/images/dote.png) no-repeat;
+    }
+    .index-row1 .c1 .hd li.on {
+        width: 24px;
+        background: url(/images/dote-on.png) no-repeat;
+    }
+    .index-row1 .c1 .bd li .pic {
+        height: 440px;
+    }
+    .index-row2 .c1{
+        width: 680px;
+    }
+    .page-inner {
+        background: url(/images/bg1.jpg) bottom center no-repeat;
+        background-size: 100%;
+    }
+    .page{
+        background: url(/images/bg-1.png) center 18px no-repeat;
+        background-size: 100%;
+    }
+
+}

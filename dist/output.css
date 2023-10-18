@@ -1,0 +1,1701 @@
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+/* 标签统一样式 */
+
+body,
+    h6,
+    p,
+    dl,
+    dt,
+    ul,
+    li,
+    input {
+  margin: 0px;
+  padding: 0px;
+}
+
+body,
+    input {
+  font-family: '微软雅黑';
+}
+
+em,
+    i {
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgb(12 10 9 / var(--tw-text-opacity));
+  text-decoration-line: none;
+}
+
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+input:-moz-placeholder-shown {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+input:placeholder-shown {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+img {
+  border-width: 0px;
+  vertical-align: middle;
+}
+
+/* 类单独处理样式 */
+
+.clearfix:after {
+  clear: both;
+  display: block;
+  height: 0px;
+}
+
+.main-tit {
+  margin-bottom: 1.5rem;
+  border-bottom-width: 4px;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity));
+  line-height: 2rem;
+}
+
+.main-tit h6 {
+  position: relative;
+  float: left;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.main-tit .more {
+  float: right;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(12 10 9 / var(--tw-text-opacity));
+}
+
+.main-list li {
+  height: 2.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2.25rem;
+}
+
+.main-list li span {
+  float: right;
+}
+
+.topbar {
+  height: 4rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.topbar a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.topbar .c1 {
+  float: left;
+  display: flex;
+  width: 15rem;
+  justify-content: space-around;
+}
+
+.topbar .c2 {
+  float: right;
+}
+
+.topbar .c3 {
+  float: right;
+  margin-right: 3rem;
+}
+
+.topbar .c3 a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.header {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.header .logo {
+  float: left;
+}
+
+.header .main-nav {
+  float: left;
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+}
+
+.header .ad {
+  position: relative;
+  float: right;
+  margin-top: 0.75rem;
+  display: block;
+  width: 18rem;
+}
+
+.header .ad a {
+  display: inline-block;
+  height: 1.25rem;
+  width: 4rem;
+}
+
+.search-box {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.search-box .text {
+  height: 2.25rem;
+  width: 11rem;
+  border-style: none;
+  padding-top: 0.5rem;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
+.search-box .btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 2.25rem;
+  vertical-align: middle;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 20;
+  line-height: 2.5rem;
+}
+
+.main-nav>ul>li {
+  position: relative;
+  z-index: 40;
+  float: left;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 2.75rem;
+  width: 20%;
+  width: 7rem;
+  text-align: center;
+}
+
+.main-nav>ul>li a {
+  display: block;
+  text-align: center;
+}
+
+.main-nav>ul>li.on:after {
+  position: absolute;
+  top: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.main-nav>ul>li:hover {
+  z-index: 50;
+}
+
+.main-nav>ul>li:hover:after {
+  position: absolute;
+  top: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.index-row1 .c1 {
+  position: relative;
+  float: left;
+  height: 470px;
+}
+
+.index-row1 .c1 .hd {
+  position: absolute;
+  top: 24rem;
+  z-index: 30;
+  width: 100%;
+  text-align: right;
+}
+
+.index-row1 .c1 .hd li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  cursor: pointer;
+}
+
+.index-row1 .c1 .bd li .pic img {
+  height: 100%;
+  width: 100%;
+}
+
+.index-row1 .c1 .slide {
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+}
+
+.index-row1 .c1 .slide .hd {
+  right: 0.5rem;
+  height: 1.5rem;
+  text-align: right;
+}
+
+.index-row1 .c1 .slide .hd .min {
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+}
+
+.index-row1 .c1 .slide .hd .min .m {
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.5);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.index-row1 .c1 .slide .bd {
+  height: 470px;
+}
+
+.index-row1 .c1 .slide .bd li {
+  position: relative;
+}
+
+.index-row1 .c1 .slide .bd .images {
+  position: absolute;
+  display: flex;
+  height: 470px;
+  transition-property: .2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.index-row1 .c1 .slide .bd .images .img {
+  height: 470px;
+  width: 680px;
+}
+
+.index-row1 .c2 {
+  float: right;
+}
+
+.index-row1 .c2 .r1 {
+  display: block;
+  height: 5rem;
+}
+
+.index-row1 .c2 .r1 a {
+  float: right;
+  margin-right: 0px;
+  display: inline-block;
+  height: 5rem;
+  width: 9rem;
+}
+
+.index-row1 .c2 .r1 .a1 {
+  float: left;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  display: block;
+}
+
+.index-row1 .c2 .main-list {
+  margin-top: 0.5rem;
+  padding-left: 3rem;
+}
+
+.index-row1 .c2 .main-list li {
+  padding-left: 0px;
+}
+
+.index-row1 .c2 .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-row2 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.index-row2 .c1 {
+  float: left;
+}
+
+.index-row2 .c1 .main-list {
+  margin-top: -0.75rem;
+}
+
+.index-row2 .c2 {
+  float: right;
+}
+
+.index-row2 .c2 .list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+.index-row2 .c2 .list li {
+  float: left;
+  width: 50%;
+}
+
+.index-row2 .c2 .list li a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: block;
+}
+
+.index-row2 .c2 .list li .pic img {
+  height: 8rem;
+  width: 100%;
+}
+
+.index-row2 .c2 .list li .text {
+  height: 2.5rem;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1.25rem;
+}
+
+.index-row3 .c1 {
+  float: left;
+}
+
+.index-row3 .c1 .main-list li i {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.index-row3 .c2 {
+  position: relative;
+  float: right;
+  height: 324px;
+}
+
+.index-row3 .c2 .hd {
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.index-row3 .c2 .hd .clearfix {
+  height: 245px;
+}
+
+.index-row3 .c2 .hd li.on::after {
+  position: absolute;
+  left: 0px;
+  bottom: -0.25rem;
+  margin-bottom: -14px;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.index-row3 .c2 .hd li {
+  position: relative;
+  float: left;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.index-row3 .c2 .bd {
+  height: 245px;
+}
+
+.index-row3 .c2 .bd .pages {
+  display: none;
+}
+
+.index-row3 .c2 .bd .active {
+  display: block;
+}
+
+.index-row3 .c2 .bd li .pic {
+  height: 7rem;
+}
+
+.index-row3 .c2 .bd li .pic img {
+  height: 100%;
+  width: 100%;
+}
+
+.index-row3 .c2 .slide .hd {
+  position: static;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.index-row3 .c2 .slide .bd li a {
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  width: 14rem;
+}
+
+.index-row3 .c2 .slide .bd li .text {
+  margin-top: -2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0.6;
+}
+
+.index-row2 .c1 .main-tit {
+  height: 3.5rem;
+}
+
+.index-row2 .c2 .main-tit {
+  height: 3.5rem;
+}
+
+.index-row3 .c1 .main-tit {
+  height: 3.5rem;
+}
+
+.index-row3 .c2 .hd {
+  height: 3.5rem;
+}
+
+.index-row2 .c2 .list {
+  height: 12rem;
+}
+
+.index-row2 .c2 .list .clearfix {
+  height: 12rem;
+}
+
+.index-row2 .c2 .list .clearfix li {
+  height: 12rem;
+}
+
+.index-row2 .c2 .list .clearfix li a {
+  height: 12rem;
+}
+
+.index-row2 .c2 .list .clearfix li a .text {
+  height: 3rem;
+}
+
+.index-row4 {
+  margin-top: 1.75rem;
+  height: 400px;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 239 239 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.index-row4 .inner {
+  height: 352px;
+}
+
+.index-row4 .inner .slide {
+  height: 352px;
+}
+
+.index-row4 .slide .hd {
+  height: 2.75rem;
+  border-bottom-width: 4px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(246 246 246 / var(--tw-border-opacity));
+}
+
+.index-row4 .slide .hd .clearfix {
+  height: 2.5rem;
+}
+
+.index-row4 .slide .hd li {
+  position: relative;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.index-row4 .slide .hd li.on::after {
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0px;
+  height: 0.5rem;
+  width: 100%;
+  --tw-content: none;
+  content: var(--tw-content);
+}
+
+.index-row4 .slide .bd {
+  height: 18rem;
+}
+
+.index-row4 .slide .bd .item {
+  height: 18rem;
+}
+
+.index-row4 .slide .bd .item .main-list {
+  height: 140px;
+}
+
+.index-row4 .slide .bd .item .pic-list {
+  height: 128px;
+}
+
+.index-row4 .slide .bd .item .main-list ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -2%;
+  margin-right: -2%;
+}
+
+.index-row4 .slide .bd .item .main-list li {
+  float: left;
+  width: 50%;
+  background-repeat: no-repeat;
+  padding-left: 0px;
+}
+
+.index-row4 .slide .bd .item .pic-list {
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 239 239 / var(--tw-border-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.index-row4 .slide .bd .item .main-list li a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: block;
+  height: 1.75rem;
+  line-height: 1.75rem;
+}
+
+.index-row4 .slide .bd .item .pic-list {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.index-row4 .slide .bd .item .pic-list .clearfix {
+  display: flex;
+  height: 8rem;
+  width: 1200px;
+  justify-content: center;
+}
+
+.index-row4 .slide .bd .item .pic-list .clearfix li {
+  height: 126px;
+  width: 136px;
+}
+
+.index-row4 .slide .bd .item .pic-list li {
+  float: left;
+  width: 16.666667%;
+}
+
+.index-row4 .slide .bd .item .pic-list li a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: block;
+  height: 126px;
+  width: 116px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+.index-row4 .slide .bd .item .pic-list li a  .text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.index-row4 .slide .bd .item .pic-list li a .pic {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover a {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 153 204 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 153 204 / var(--tw-bg-opacity));
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover a .text {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer {
+  position: relative;
+  height: 15rem;
+  min-width: 1200px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0px;
+  opacity: 0.8;
+}
+
+.footer .wrap {
+  height: 14rem;
+  width: 1200px;
+}
+
+.footer .c1 {
+  float: left;
+}
+
+.footer .c1 .clearfix {
+  height: 8rem;
+}
+
+.footer .c1 .clearfix .icons {
+  height: 7rem;
+  width: 16rem;
+}
+
+.footer .c1 .clearfix .icons a {
+  display: block;
+  height: 3rem;
+}
+
+.footer .c1 .clearfix .icons a .pic {
+  height: 3rem;
+  width: 16rem;
+}
+
+.footer .c1 .clearfix .icons a .pic img {
+  height: 3rem;
+  width: 16rem;
+}
+
+.footer .c1 .pic img {
+  width: 6rem;
+}
+
+.footer .c1 li {
+  float: left;
+  margin-right: 3rem;
+  text-align: center;
+}
+
+.footer .c1 li p {
+  margin-top: 0.5rem;
+}
+
+.footer .c2 {
+  float: right;
+  width: 500px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.footer .c2 .r1 dl {
+  float: left;
+  margin-left: 5%;
+  width: 45%;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
+}
+
+.footer .c2 .r1 dl dt {
+  font-weight: 700;
+}
+
+.footer .c2 .r2 {
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+.mores {
+  position: absolute;
+  top: 0.5rem;
+  right: 0px;
+}
+
+#slide3 {
+  position: relative;
+}
+
+.date {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.page {
+  top: 50%;
+  bottom: 50%;
+  left: 1.25rem;
+  right: 1.25rem;
+}
+
+.page .ad .imgs {
+  border-width: 0px;
+}
+
+.index-row3 .c2 .bd .pages {
+  position: absolute;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.3s;
+}
+
+.index-row3 .c2 .bd .active {
+  display: block;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.-mb-5 {
+  margin-bottom: -1.25rem;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.whitespace-normal {
+  white-space: normal;
+}
+
+.border-0 {
+  border-width: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-\[\'\5FAE\8F6F\96C5\9ED1\'\] {
+  font-family: '微软雅黑';
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+/* 主要进行一些宽和高的规定和背景图片的设置 */
+
+body{
+  min-width: 1360px;
+  font-size: 16px;
+}
+
+h6{
+  font-size: 100%;
+}
+
+input{
+  font-size: 100%;
+  outline: 0;
+}
+
+.header{
+  height: 487px;
+}
+
+.index-row1 .c1{
+  width: 470px;
+}
+
+.index-row1 .c2{
+  width: 470px;
+  height: 443px;
+}
+
+.main-tit h6::after{
+  content: '';
+  position: absolute;
+  margin-bottom:-14px ;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 10px;
+  background: url(/images/line.png) bottom center no-repeat;
+}
+
+.wrap{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header .main-nav{
+  width: 570px;
+}
+
+.search-box .text{
+  background: url(/images/search-bg.png);
+}
+
+.main-nav>ul>li a{
+  font-size:22px;
+}
+
+.main-nav>ul>li.on:after{
+  content: '';
+  width: 60%;
+  height: 2px;
+  left: 20%;
+}
+
+.main-nav>ul>li:hover:after{
+  content: '';
+  width: 60%;
+  height: 2px;
+  left: 20%;
+}
+
+.index-row1{
+  height: 500px;
+}
+
+.index-row2{
+  height: 522px;
+  margin: 30px 0;
+}
+
+.index-row3{
+  height: 324px;
+}
+
+.index-row1 .c2 .main-list{
+  background: url(/images/yd.png)left center no-repeat;
+  background-size: 6%;
+}
+
+.index-row2 .c2{
+  width: 470px;
+}
+
+.index-row3 .c1{
+  width: 680px;
+}
+
+.index-row3 .c2{
+  width: 470px;
+}
+
+.index-row3 .c2 .hd{
+  border-bottom: 4px solid #ccc;
+}
+
+.index-row3 .c2 .hd li.on::after{
+  content: '';
+  background: url(/images/line.png) bottom center no-repeat;
+}
+
+.index-row4 .slide .hd li.on::after{
+  background: url(/images/line.png) bottom center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li1 .pic{
+  background: url(/images/r4-icon1.png)center center no-repeat;
+  background-size: 74%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li2 .pic{
+  background: url(/images/r4-icon2.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li3 .pic{
+  background: url(/images/r4-icon3.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li4 .pic{
+  background: url(/images/r4-icon4.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li5 .pic{
+  background: url(/images/r4-icon5.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li6 .pic{
+  background: url(/images/r4-icon6.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li7 .pic{
+  background: url(/images/r4-icon7.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li.li8 .pic{
+  background: url(/images/r4-icon8.png)center center no-repeat;
+  background-size: 70%!important;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li1 .pic {
+  background: url(/images/r4-icon1-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li2 .pic {
+  background: url(/images/r4-icon2-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li3 .pic {
+  background: url(/images/r4-icon3-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li4 .pic {
+  background: url(/images/r4-icon4-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li5 .pic {
+  background: url(/images/r4-icon5-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li6 .pic {
+  background: url(/images/r4-icon6-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li7 .pic {
+  background: url(/images/r4-icon7-on.png) center center no-repeat;
+}
+
+.index-row4 .slide .bd .item .pic-list li:hover.li8 .pic {
+  background: url(/images/r4-icon8-on.png) center center no-repeat;
+}
+
+.index-row1 .c1{
+  width: 680px;
+}
+
+.index-row1 .c1 .hd li{
+  background: url(/images/dote.png) no-repeat;
+}
+
+.index-row1 .c1 .hd li.on {
+  width: 24px;
+  background: url(/images/dote-on.png) no-repeat;
+}
+
+.index-row1 .c1 .bd li .pic {
+  height: 440px;
+}
+
+.index-row2 .c1{
+  width: 680px;
+}
+
+.page-inner {
+  background: url(/images/bg1.jpg) bottom center no-repeat;
+  background-size: 100%;
+}
+
+.page{
+  background: url(/images/bg-1.png) center 18px no-repeat;
+  background-size: 100%;
+}
